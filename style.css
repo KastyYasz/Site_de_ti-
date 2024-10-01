@@ -1,0 +1,104 @@
+*{
+  padding: 0;
+  margin: 0; /* Change from margin: 0%; */
+  text-decoration: none;
+  box-sizing: border-box;
+  outline: none;
+}
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(imagens/claro.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+  transition: background 1s;
+}
+
+body img{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  transition: opacity 2s;
+}
+
+.button{
+  position: fixed;
+  top: 20px;
+  right: 10px;
+  width: 70px;
+  height: 40px;
+  border-radius: 500px;
+  box-shadow: 0 0 5px black;
+  cursor: pointer;
+  background-color: white;
+  z-index: 999;
+}
+.ball{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 43px;
+  height: 100%;
+  border-radius: 60%;
+  background-color: black;
+  transition: left 1s;
+}
+.ball-move{
+  left: calc(100% - 40px);
+}
+.dark{
+  background-image: url(imagens/27.png);
+}
+
+.container-slider {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.container-images {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 800px;
+  height: 100px;
+}
+
+.slider {
+  opacity: 0;
+  transition: opacity .1800s;
+  position: absolute;
+  width: 90%;
+  height: 500px;
+  border-radius: 50px;
+}
+
+.on {
+  opacity: 1;
+}
+
+#prev-button, #next-button {
+  width: 30px;
+  height: 30px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+#prev-button img, #next-button img {
+  width: 100%;
+  height: 100%;
+}
+
+#prev-button {
+  transform: rotate(180deg);
+}
